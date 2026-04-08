@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drift Surface</title>
+    <!-- Favicon -->
+<link rel="icon" href="https://driftsurface.studio/wp-content/uploads/2024/03/cropped-Untitled-design-3-192x192.png" sizes="192x192">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<style>
+body { background-color: black; margin: 0; overflow: hidden; }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+    }
+    
+    .slide-content-wrapper {
+      position: relative;
+      width: 80%; 
+      height: 70%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slide-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      will-change: transform, opacity;
+    }
+    .main-title {
+      position: absolute;
+      left: -10%; 
+      z-index: 50;
+      pointer-events: none;
+    }
+</style>
+</head>
+
+<body class="bg-black">
+
+<header class="w-full absolute top-0 left-0 z-50">
+  <div class="flex items-center w-full px-16 py-11 text-white">
+    <div class="w-1/2">
+      <img src="./images/drift_logo.webp" class="h-30 object-contain w-[200px]" />
+    </div>
+    <div class="w-1/2 flex justify-end items-center">
+      <button id="menuToggle" class="flex flex-col gap-1.5 z-[60] relative">
+        <span class="block w-6 h-[2px] bg-white"></span>
+        <span class="block w-6 h-[2px] bg-white"></span>
+        <span class="block w-6 h-[2px] bg-white"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="swiper mySwiper h-screen w-full">
+  <div class="swiper-wrapper">
+    
+    <div class="swiper-slide overflow-hidden relative">
+      <img src="./images/home-page-drift-studio-1-scaled.webp" class="slide-img w-full h-full object-cover z-0" />
+      
+      <div class="absolute inset-0  z-40 flex flex-col justify-between p-12 lg:p-20 bg-black/10">
+        <div class="mt-auto mb-auto">
+          <h1 class="text-white text-7xl lg:text-[120px] font-bold uppercase leading-[0.85] tracking-tighter ">
+          
+          </h1>
+        </div>
+        <div class="flex justify-between items-end">
+           <div class="flex gap-10 mb-2">
+                  <button class="prev-slide hover:text-white text-[#ffffff]/50 transition">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                      </svg>
+                    </button>
+
+                    <button class="next-slide hover:text-white  text-[#ffffff]/50 transition">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                       </svg>
+                     </button>
+            </div>
+          <div class="text-white font-bold text-xl uppercase tracking-[0.2em]">
+            Drift Surface Studio
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--slide 1-->
+    <div class="swiper-slide overflow-hidden relative">
+      <img src="./images/raw-1-min.webp" class="slide-img w-full h-full object-cover z-0" />
+      
+      <div class="absolute inset-0 z-40 flex flex-col justify-between p-12 lg:p-20 bg-black/10">
+        <div class="mt-auto mb-auto">
+          <h1 class="text-white text-7xl lg:text-[100px] font-bold uppercase leading-[0.85] tracking-tighter">
+           RAW<br>SERIES
+          </h1>
+        </div>
+        <div class="flex justify-between items-end">
+          <div class="flex gap-10 mb-2">
+                  <button class="prev-slide hover:text-white text-[#ffffff]/50  transition">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                      </svg>
+                    </button>
+
+                    <button class="next-slide hover:text-white text-[#ffffff]/50  transition">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                       </svg>
+                     </button>
+            </div>
+          <div class="text-white font-bold text-xl uppercase tracking-[0.2em]">
+            Drift Surface Studio
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--slide 2-->
+    <div class="swiper-slide overflow-hidden relative">
+      <img src="./images/classic-5-5.webp" class="slide-img w-full h-full object-cover z-0" />
+      
+      <div class="absolute inset-0 z-40 flex flex-col justify-between p-12 lg:p-20 bg-black/10">
+        <div class="mt-auto mb-auto">
+          <h1 class="text-white text-7xl lg:text-[100px] font-bold uppercase leading-[0.85] tracking-tighter">
+           CLASSIC<br>SERIES
+          </h1>
+        </div>
+        <div class="flex justify-between items-end">
+          <div class="flex gap-10 mb-2">
+                  <button class="prev-slide hover:text-white text-[#ffffff]/50  transition">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                      </svg>
+                    </button>
+
+                    <button class="next-slide hover:text-white text-[#ffffff]/50  transition">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                       </svg>
+                     </button>
+            </div>
+          <div class="text-white font-bold text-xl uppercase tracking-[0.2em]">
+            Drift Surface Studio
+          </div>
+        </div>
+      </div>
+    </div>
+<!--slide 3-->
+    <div class="swiper-slide overflow-hidden relative">
+      <img src="./images/NIO_ANGLE-1-scaled.webp" class="slide-img w-full h-full object-cover z-0" />
+      <div class="absolute inset-0 z-40 flex flex-col justify-between p-12 lg:p-20 bg-black/10">
+        <div class="mt-auto mb-auto">
+          <h1 class="text-white text-7xl lg:text-[100px] font-bold uppercase leading-[0.85] tracking-tighter">
+            DURALITE<br>SERIES
+          </h1>
+        </div>
+        <div class="flex justify-between items-end">
+          <div class="flex gap-10 mb-2">
+                  <button class="prev-slide hover:text-white text-[#ffffff]/50 transition">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                      </svg>
+                    </button>
+
+                    <button class="next-slide hover:text-white text-[#ffffff]/50  transition">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                       </svg>
+                     </button>
+            </div>
+          <div class="text-white font-bold text-xl uppercase tracking-[0.2em]">
+            Drift Surface Studio
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--slide 4-->
+    <div class="swiper-slide overflow-hidden relative">
+      <img src="./images/Sand-stone-1-min.webp" class="slide-img w-full h-full object-cover z-0" />
+      
+      <div class="absolute inset-0 z-40 flex flex-col justify-between p-12 lg:p-20 bg-black/10">
+        <div class="mt-auto mb-auto">
+          <h1 class="text-white text-7xl lg:text-[100px] font-bold uppercase leading-[0.85] tracking-tighter">
+            OSMOSIS <br>SERIES
+          </h1>
+        </div>
+        <div class="flex justify-between items-end">
+         <div class="flex gap-10 mb-2">
+                  <button class="prev-slide hover:text-white text-[#ffffff]/50  transition">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                      </svg>
+                    </button>
+
+                    <button class="next-slide hover:text-white text-[#ffffff]/50  transition">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                       </svg>
+                     </button>
+            </div>
+          <div class="text-white font-bold text-xl uppercase tracking-[0.2em]">
+            Drift Surface Studio
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--slide 5-->
+    <div class="swiper-slide overflow-hidden relative">
+      <img src="./images/DINO_700KB-scaled.webp" class="slide-img w-full h-full object-cover z-0" />
+      
+      <div class="absolute inset-0 z-40 flex flex-col justify-between p-12 lg:p-20 bg-black/10">
+        <div class="mt-auto mb-auto">
+          <h1 class="text-white text-7xl lg:text-[100px] font-bold uppercase leading-[0.85] tracking-tighter">
+           SEAM LOCK<br>SERIES
+          </h1>
+        </div>
+        <div class="flex justify-between items-end">
+         <div class="flex gap-10 mb-2">
+                  <button class="prev-slide hover:text-white text-[#ffffff]/50  transition">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                      </svg>
+                    </button>
+
+                    <button class="next-slide hover:text-white text-[#ffffff]/50  transition">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                       </svg>
+                     </button>
+            </div>
+          <div class="text-white font-bold text-xl uppercase tracking-[0.2em]">
+            Drift Surface Studio
+          </div>
+        </div>
+      </div>
+    </div>
+ <!--slide 6-->
+    <div class="swiper-slide overflow-hidden relative">
+      <img src="./images/download.webp" class="slide-img w-full h-full object-cover z-0" />
+      
+      <div class="absolute inset-0 z-40 flex flex-col justify-between p-12 lg:p-20 bg-black/10">
+        <div class="mt-auto mb-auto">
+          <h1 class="text-white text-7xl lg:text-[100px] font-bold uppercase leading-[0.85] tracking-tighter">
+           KRAFT<br>SERIES 
+          </h1>
+        </div>
+        <div class="flex justify-between items-end">
+         <div class="flex gap-10 mb-2">
+                  <button class="prev-slide hover:text-white text-[#ffffff]/50  transition">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                      </svg>
+                    </button>
+
+                    <button class="next-slide hover:text-white text-[#ffffff]/50  transition">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                       </svg>
+                     </button>
+            </div>
+          <div class="text-white font-bold text-xl uppercase tracking-[0.2em]">
+            Drift Surface Studio
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--slide 7-->
+    <div class="swiper-slide overflow-hidden relative">
+      <img src="./images/Duralite-series-1-min.webp" class="slide-img w-full h-full object-cover z-0" />
+      
+      <div class="absolute inset-0 z-40 flex flex-col justify-between p-12 lg:p-20 bg-black/10">
+        <div class="mt-auto mb-auto">
+          <h1 class="text-white text-7xl lg:text-[100px] font-bold uppercase leading-[0.85] tracking-tighter">
+           SAND STONE<br>SERIES
+          </h1>
+        </div>
+        <div class="flex justify-between items-end">
+         <div class="flex gap-10 mb-2">
+                  <button class="prev-slide hover:text-white text-[#ffffff]/50  transition">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                      </svg>
+                    </button>
+
+                    <button class="next-slide hover:text-white text-[#ffffff]/50  transition">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                       </svg>
+                     </button>
+            </div>
+          <div class="text-white font-bold text-xl uppercase tracking-[0.2em]">
+            Drift Surface Studio
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--slide 8-->
+    <div class="swiper-slide overflow-hidden relative">
+      <img src="./images/Axiom-1-min.webp" class="slide-img w-full h-full object-cover z-0" />
+      
+      <div class="absolute inset-0 z-40 flex flex-col justify-between p-12 lg:p-20 bg-black/10">
+        <div class="mt-auto mb-auto">
+          <h1 class="text-white text-7xl lg:text-[100px] font-bold uppercase leading-[0.85] tracking-tighter">
+          AXIOM<br>SERIES
+          </h1>
+        </div>
+        <div class="flex justify-between items-end">
+         <div class="flex gap-10 mb-2">
+                  <button class="prev-slide hover:text-white text-[#ffffff]/50  transition">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                      </svg>
+                    </button>
+
+                    <button class="next-slide hover:text-white text-[#ffffff]/50  transition">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                       </svg>
+                     </button>
+            </div>
+          <div class="text-white font-bold text-xl uppercase tracking-[0.2em]">
+            Drift Surface Studio
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+</div>
+
+<div id="overlay"
+     class="fixed inset-0 bg-black/50 hidden z-[40] transition-opacity duration-300">
+</div>
+
+
+<div id="mobileMenu"
+     class="fixed top-0 right-0 h-full 
+            w-full sm:w-2/3 md:w-1/2 lg:w-[50%] 
+            bg-black text-white
+            transform translate-x-full transition-transform duration-500 ease-in-out
+            z-[50] flex flex-col lg:justify-between
+            p-6 sm:p-8 md:p-10 lg:p-12
+            overflow-y-auto">
+
+
+    <div class="absolute inset-0 opacity-20 pointer-events-none 
+                bg-[url('/images/Side-design.webp')] 
+                bg-[length:400px] sm:bg-[length:500px] md:bg-[length:600px] 
+                bg-right bg-repeat-y">
+    </div>
+
+
+    <div class="relative z-10 flex justify-end">
+        <button id="menuClose" class="text-3xl sm:text-4xl font-light">✕</button>
+    </div>
+
+
+    <nav class="relative z-10 space-y-5 sm:space-y-6 
+                text-2xl sm:text-3xl font-bold tracking-tight mt-6">
+        <a href="#" class="block text-white">Home</a>
+        <a href="#" class="block text-[#4D4D4D] hover:text-white transition">Products</a>
+        <a href="#" class="block text-[#4D4D4D] hover:text-white transition">Blog</a>
+        <a href="#" class="block text-[#4D4D4D] hover:text-white transition">Employee Login</a>
+        <a href="#" class="block text-[#4D4D4D] hover:text-white transition">Contact</a>
+    </nav>
+
+
+    <div class="relative z-10 mt-10">
+        <div class="flex gap-5 sm:gap-6 mb-6 text-lg sm:text-xl text-[#4D4D4D]">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+
+        <div class="text-xs sm:text-sm leading-relaxed font-medium text-white">
+            <p>© Drift Surface Studio 2024. All Rights Reserved</p>
+            <p>Developed by VeravalonlinePvt.Ltd</p>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  
+
+const swiper = new Swiper(".mySwiper", {
+  direction: "vertical",
+  loop: true,
+  speed: 0, 
+  allowTouchMove: false,
+  watchSlidesProgress: true,
+});
+
+let isAnimating = false;
+let autoScrollInterval;
+const autoDelay = 4000;
+
+
+function handleSlideChange(direction) {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  stopAutoScroll();
+
+  const currentSlide = swiper.slides[swiper.activeIndex];
+  const nextIndex = direction === "next" ? swiper.activeIndex + 1 : swiper.activeIndex - 1;
+  const nextSlide = swiper.slides[(nextIndex + swiper.slides.length) % swiper.slides.length];
+
+  const currentImg = currentSlide.querySelector(".slide-img");
+  const nextImg = nextSlide.querySelector(".slide-img");
+  const currentText = currentSlide.querySelector("h1");
+  const nextText = nextSlide.querySelector("h1");
+
+  const tl = gsap.timeline({
+    onComplete: () => {
+     
+      gsap.set([nextImg, currentImg, nextText, currentText], { clearProps: "all" });
+      isAnimating = false;
+      startAutoScroll();
+    }
+  });
+
+  tl.set(nextSlide, { autoAlpha: 1, zIndex: 50 });
+  tl.set(nextImg, {
+    scale: 0.6,
+    y: direction === "next" ? "100%" : "-100%",
+  });
+  tl.set(nextText, {
+    y: direction === "next" ? 100 : -100,
+    opacity: 0
+  });
+
+  
+  tl.to(currentImg, {
+    scale: 0.6,
+    duration: 0.8,
+    ease: "power2.inOut"
+  }, 0);
+
+  tl.to(currentText, {
+    y: direction === "next" ? -100 : 100,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power2.in"
+  }, 0);
+
+  tl.to(nextImg, {
+    y: "0%",
+    duration: 0.9,
+    ease: "power2.out",
+    onStart: () => {
+      
+      if (direction === "next") swiper.slideNext(0);
+      else swiper.slidePrev(0);
+    }
+  }, 0.1);
+
+  tl.to(nextText, {
+    y: 0,
+    opacity: 1,
+    duration: 0.7,
+    ease: "power3.out"
+  }, "-=0.4");
+
+  tl.to(nextImg, {
+    scale: 1,
+    duration: 0.7,
+    ease: "power2.out"
+  }, "-=0.3");
+}
+
+
+function startAutoScroll() {
+  stopAutoScroll();
+  autoScrollInterval = setInterval(() => {
+    if (!isAnimating) handleSlideChange("next");
+  }, autoDelay);
+}
+
+function stopAutoScroll() {
+  clearInterval(autoScrollInterval);
+}
+
+
+document.querySelectorAll(".next-slide").forEach(btn => {
+  btn.addEventListener("click", () => handleSlideChange("next"));
+});
+
+document.querySelectorAll(".prev-slide").forEach(btn => {
+  btn.addEventListener("click", () => handleSlideChange("prev"));
+});
+
+let scrollAccumulator = 0;
+window.addEventListener("wheel", (e) => {
+  if (isAnimating) return;
+  scrollAccumulator += e.deltaY;
+  if (Math.abs(scrollAccumulator) > 50) {
+    handleSlideChange(scrollAccumulator > 0 ? "next" : "prev");
+    scrollAccumulator = 0;
+  }
+}, { passive: false });
+
+startAutoScroll();
+
+// Mobile Menu Logic (Same as your original)
+const toggleBtn = document.getElementById("menuToggle");
+const menu = document.getElementById("mobileMenu");
+const overlay = document.getElementById("overlay");
+const closeBtn = document.getElementById("menuClose");
+
+if(toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      menu.classList.toggle("translate-x-full");
+      overlay.classList.toggle("hidden");
+    });
+}
+
+[closeBtn, overlay].forEach(el => {
+  if(el) {
+    el.addEventListener("click", () => {
+        menu.classList.add("translate-x-full");
+        overlay.classList.add("hidden");
+      });
+  }
+});
+</script>
+</body>
+</body>
+</html>
